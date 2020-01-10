@@ -14,18 +14,42 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
     <Filter Include="Header Files\base">
-      <UniqueIdentifier>{3e75da12-e693-4d2b-9f8f-9d20f502db30}</UniqueIdentifier>
+      <UniqueIdentifier>{1efd7f38-8fc8-48b5-89fa-565787af4239}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\base">
-      <UniqueIdentifier>{f900eec1-543e-4732-a93e-c68093346090}</UniqueIdentifier>
+      <UniqueIdentifier>{b67d051e-45a1-46c9-bdfd-36fc0dbc1d3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Logger">
+      <UniqueIdentifier>{7b155889-cdb3-42f4-acd0-4ae6cb55d52c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Logger">
+      <UniqueIdentifier>{c0adda7f-5714-483e-b434-b526aba74a75}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Logger\czmp_log_protocol.pb.h">
+      <Filter>Header Files\Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Logger\LoggerClient.h">
+      <Filter>Header Files\Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Logger\LoggerDefines.h">
+      <Filter>Header Files\Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Logger\LoggerService.h">
+      <Filter>Header Files\Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Logger\SqliteAppender.h">
+      <Filter>Header Files\Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Logger\SqliteConnector.h">
+      <Filter>Header Files\Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Logger\SqliteMaintainThread.h">
+      <Filter>Header Files\Logger</Filter>
     </ClInclude>
     <ClInclude Include="..\Base\Timer.h">
       <Filter>Header Files\base</Filter>
@@ -33,55 +57,40 @@
     <ClInclude Include="..\Base\ZactorThread.h">
       <Filter>Header Files\base</Filter>
     </ClInclude>
-    <ClInclude Include="..\Logger\czmp_log_protocol.pb.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Logger\LoggerClient.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Logger\LoggerDefines.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Logger\LoggerService.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Logger\SqliteAppender.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Logger\SqliteConnector.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Logger\SqliteMaintainThread.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="..\Base\czmq_defines.h">
+      <Filter>Header Files\base</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="liblogger.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Unittest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LogerClientUnittest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Logger\czmp_log_protocol.pb.cc">
+      <Filter>Source Files\Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Logger\LoggerService.cpp">
+      <Filter>Source Files\Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Logger\SqliteAppender.cpp">
+      <Filter>Source Files\Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Logger\SqliteConnector.cpp">
+      <Filter>Source Files\Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Logger\SqliteMaintainThread.cpp">
+      <Filter>Source Files\Logger</Filter>
     </ClCompile>
     <ClCompile Include="..\Base\Timer.cpp">
       <Filter>Source Files\base</Filter>
     </ClCompile>
     <ClCompile Include="..\Base\ZactorThread.cpp">
       <Filter>Source Files\base</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Logger\czmp_log_protocol.pb.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Logger\LoggerService.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Logger\SqliteAppender.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Logger\SqliteConnector.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Logger\SqliteMaintainThread.cpp">
-      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

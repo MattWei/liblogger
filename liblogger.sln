@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.960
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "liblogger", "liblogger\liblogger.vcxproj", "{E1614474-BD19-49CA-ABAE-797C2A6244B3}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Unittest", "Unittest\Unittest.vcxproj", "{7F25F6EE-C47A-4EF6-B2F1-E84121A9FC92}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{E1614474-BD19-49CA-ABAE-797C2A6244B3}.Release|x64.Build.0 = Release|x64
 		{E1614474-BD19-49CA-ABAE-797C2A6244B3}.Release|x86.ActiveCfg = Release|Win32
 		{E1614474-BD19-49CA-ABAE-797C2A6244B3}.Release|x86.Build.0 = Release|Win32
+		{7F25F6EE-C47A-4EF6-B2F1-E84121A9FC92}.Debug|x64.ActiveCfg = Debug|x64
+		{7F25F6EE-C47A-4EF6-B2F1-E84121A9FC92}.Debug|x64.Build.0 = Debug|x64
+		{7F25F6EE-C47A-4EF6-B2F1-E84121A9FC92}.Debug|x86.ActiveCfg = Debug|Win32
+		{7F25F6EE-C47A-4EF6-B2F1-E84121A9FC92}.Debug|x86.Build.0 = Debug|Win32
+		{7F25F6EE-C47A-4EF6-B2F1-E84121A9FC92}.Release|x64.ActiveCfg = Release|x64
+		{7F25F6EE-C47A-4EF6-B2F1-E84121A9FC92}.Release|x64.Build.0 = Release|x64
+		{7F25F6EE-C47A-4EF6-B2F1-E84121A9FC92}.Release|x86.ActiveCfg = Release|Win32
+		{7F25F6EE-C47A-4EF6-B2F1-E84121A9FC92}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

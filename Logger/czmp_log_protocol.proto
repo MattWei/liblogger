@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+message LogGetterParams {
+	uint32 startLevel = 1;
+	string dateStart = 2;
+	string dateEnd = 3;
+	uint32 maxRows = 4;
+
+	bytes fliter = 5; //有中文， 用bytes
+}
+
+message LogDetail {
+	string logTime = 1;		//log产生时间
+	uint32 logLevel = 2;		//日志类型
+	string logModule = 3;
+	bytes logMsg = 4;		//有中文， 用bytes
+	string logData = 5;
+}
+
+message LogVector {
+  repeated LogDetail log = 1;
+}
