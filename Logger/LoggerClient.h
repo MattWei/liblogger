@@ -5,7 +5,6 @@
 #include <memory>
 #include <iostream>
 
-#include "Base/Unite.h"
 #include "LoggerDefines.h"
 
 #include <log4cplus/logger.h>

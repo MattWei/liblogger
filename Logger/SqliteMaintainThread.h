@@ -6,7 +6,7 @@
 #include "LoggerDefines.h"
 #include "SqliteConnector.h"
 
-
+const static char *LOGER_SERVICE_URI = "inproc://logger_inproc";
 const static char *SQLITE_LOGGER_CTRL_INPROC = "inproc://sqlite_log_ctrl.inproc";
 const static char *GET_LOG_CMD = "GetLog";
 

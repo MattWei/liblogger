@@ -2,8 +2,6 @@
 
 #include <log4cplus/loglevel.h>
 
-const static char *LOGER_SERVICE_URI = "inproc://logger_inproc";
-
 #define MAIN_LOG_TAG "main"
 
 struct LogRequestParams{
