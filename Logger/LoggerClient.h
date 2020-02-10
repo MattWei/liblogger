@@ -15,6 +15,12 @@
 #define THIS_MODULE __FILE__
 #endif
 
+#define ZMQ_DUMP_MSG(title, msg) do {	\
+	printf("%s\n", title);				\
+	zmsg_dump(msg);						\
+	printf("\n");						\
+} while (0)
+
 #define LOG_STR_BODY(logger, logModule, logLevel, logEvent, logData)        \
     LOG4CPLUS_SUPPRESS_DOWHILE_WARNING()									\
     do {																	\

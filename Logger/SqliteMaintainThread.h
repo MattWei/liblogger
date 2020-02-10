@@ -20,11 +20,13 @@ public:
 	~SqliteMaintainThread();
 
 private:
+	bool onStarted() override;
+
 	bool openSqlDatabase();
 	bool createTable();
 	void resetDatabase();
 
-	virtual void run(zsock_t * pipe) override;
+	virtual void run() override;
 	void saveLog(zsock_t * sock, std::vector<LogItem> &logs);
 	void saveSingleLogToSqlite(const LogItem &log);
 	void saveLogToSqlite(std::vector<LogItem> &logs);

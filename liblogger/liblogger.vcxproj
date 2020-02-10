@@ -92,6 +92,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>C:\Workspace\softwares\vcpkg\installed\x86-windows-static\include;C:\Workspace\sources\VSProject\protobuf-3.10.1\src;$(ProjectDir)..;C:\Workspace\sources\VSProject\libs_bin\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -152,6 +153,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\Base\czmq_defines.h" />
     <ClInclude Include="..\Base\Timer.h" />
     <ClInclude Include="..\Base\ZactorThread.h" />
     <ClInclude Include="..\Logger\czmp_log_protocol.pb.h" />

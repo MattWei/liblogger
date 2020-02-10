@@ -82,24 +82,28 @@ void SqliteMaintainThread::resetDatabase()
 	openSqlDatabase();
 }
 
-void SqliteMaintainThread::run(zsock_t * pipe)
+bool SqliteMaintainThread::onStarted()
 {
 	if (!openSqlDatabase()) {
-		int res = zsock_signal(pipe, -1);
-		return;
+		sendSignal(-1);
+		return false;
 	}
 
+	sendSignal(0);
+	return true;
+}
+
+void SqliteMaintainThread::run()
+{
 	printf("SqliteMaintainThread start\n");
 
 	zsock_t *pullSock = zsock_new_pull(LOGER_SERVICE_URI);
 	assert(pullSock);
+	addPollerSock(pullSock);
 
 	zsock_t *ctrlSock = zsock_new_rep(SQLITE_LOGGER_CTRL_INPROC);
-	zpoller_t *poller = zpoller_new(pipe, pullSock, ctrlSock, NULL);
-	assert(poller);
-
-	int res = zsock_signal(pipe, 0);
-	assert(res == 0);
+	assert(ctrlSock);
+	addPollerSock(ctrlSock);
 
 	std::vector<LogItem> logs;
 	logs.reserve(MAX_LOG_QUEUE_SIZE * 2);
@@ -112,8 +116,8 @@ void SqliteMaintainThread::run(zsock_t * pipe)
 	}
 	
 	while (!zsys_interrupted) {
-		zsock_t *which = (zsock_t *)zpoller_wait(poller, 100);
-		if (which == pipe && isExit(pipe)) {
+		zsock_t *which = pollerWait(100);
+		if (isExit(which)) {
 			break;
 		}
 		if (which == pullSock) {
@@ -132,7 +136,7 @@ void SqliteMaintainThread::run(zsock_t * pipe)
 		maintainSqliteFile();
 	}
 
-	zpoller_destroy(&poller);
+	onExit();
 	zsock_destroy(&pullSock);
 	zsock_destroy(&ctrlSock);
 
